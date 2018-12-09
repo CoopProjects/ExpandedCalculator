@@ -135,7 +135,24 @@ static double fac(double a) {/* simplest version of fac */
 }
 
 static double sinc(double n) {/* simplest version of fac */
-    return sin(n)/n;
+    if (n==0.0) {
+        return 1;
+    }
+    else {
+        return sin(n)/n;
+    }
+}
+
+static double besselj(double a, double x) {/* simplest version of fac */
+    int32_t infupperbound = 1000000;
+    double result = 0;
+
+    for (int m = 0; m<infupperbound; ++m) {
+        float gamma = fac(m+a+1-1);
+        result += ( ((pow(-1,m))/(fac(m)*gamma)) * pow(x/2,(2*m + a)) );
+    }
+
+    return result;
 }
 
 static double ncr(double n, double r) {
@@ -161,6 +178,7 @@ static const te_variable functions[] = {
     {"asin", asin,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"atan", atan,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"atan2", atan2,  TE_FUNCTION2 | TE_FLAG_PURE, 0},
+    {"besselj", besselj,  TE_FUNCTION2 | TE_FLAG_PURE, 0},
     {"ceil", ceil,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"cos", cos,      TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"cosh", cosh,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
@@ -171,7 +189,6 @@ static const te_variable functions[] = {
     {"ln", log,       TE_FUNCTION1 | TE_FLAG_PURE, 0},
 //#ifdef TE_NAT_LOG
     {"log", log,      TE_FUNCTION1 | TE_FLAG_PURE, 0},
-    {"sinc", log,     TE_FUNCTION1 | TE_FLAG_PURE, 0},
 //#else
     //{"log", log10,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
 //#endif
@@ -181,6 +198,7 @@ static const te_variable functions[] = {
     {"pi", pi,        TE_FUNCTION0 | TE_FLAG_PURE, 0},
     {"pow", pow,      TE_FUNCTION2 | TE_FLAG_PURE, 0},
     {"sin", sin,      TE_FUNCTION1 | TE_FLAG_PURE, 0},
+    {"sinc", sinc,     TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"sinh", sinh,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"sqrt", sqrt,    TE_FUNCTION1 | TE_FLAG_PURE, 0},
     {"tan", tan,      TE_FUNCTION1 | TE_FLAG_PURE, 0},

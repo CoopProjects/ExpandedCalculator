@@ -10,7 +10,9 @@
 			<value>Output</value>
 			<pos>80,96</pos>
 			<size>176,27</size>
-			<enabled>0</enabled>
+			<fg>#000000</fg>
+			<bg>#FF9225</bg>
+			<style>wxTE_READONLY</style>
 		</object>
 		<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
 			<label>Calculate</label>

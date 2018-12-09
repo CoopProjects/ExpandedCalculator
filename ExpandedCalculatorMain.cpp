@@ -1,9 +1,9 @@
 /***************************************************************
  * Name:      ExpandedCalculatorMain.cpp
  * Purpose:   Code for Application Frame
- * Author:    Phillip Duncan ()
+ * Author:    CoopProjects
  * Created:   2018-12-09
- * Copyright: Phillip Duncan ()
+ * Copyright: CoopProjects
  * License:
  **************************************************************/
 
@@ -68,8 +68,9 @@ ExpandedCalculatorFrame::ExpandedCalculatorFrame(wxWindow* parent,wxWindowID id)
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     TextCtrl1 = new wxTextCtrl(this, ID_TEXTCTRL1, _("Equation"), wxPoint(32,48), wxSize(224,27), 0, wxDefaultValidator, _T("ID_TEXTCTRL1"));
-    TextCtrl2 = new wxTextCtrl(this, ID_TEXTCTRL2, _("Output"), wxPoint(80,96), wxSize(176,27), 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
-    TextCtrl2->Disable();
+    TextCtrl2 = new wxTextCtrl(this, ID_TEXTCTRL2, _("Output"), wxPoint(80,96), wxSize(176,27), wxTE_READONLY, wxDefaultValidator, _T("ID_TEXTCTRL2"));
+    TextCtrl2->SetForegroundColour(wxColour(0,0,0));
+    TextCtrl2->SetBackgroundColour(wxColour(255,146,37));
     Button2 = new wxButton(this, ID_BUTTON2, _("Calculate"), wxPoint(280,48), wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
@@ -124,7 +125,7 @@ void ExpandedCalculatorFrame::OnButton2Click(wxCommandEvent& event)
 
     wxString output = wxString::Format(wxT("%f"),result);
 
-
-    wxMessageBox(output);
+    TextCtrl2->SetValue(output);
+    //wxMessageBox(output);
 
 }

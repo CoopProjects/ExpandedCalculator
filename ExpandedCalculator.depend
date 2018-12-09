@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1544345429 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorApp.cpp
+1544353299 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorApp.cpp
 	"ExpandedCalculatorApp.h"
 	"ExpandedCalculatorMain.h"
 	<wx/image.h>
 
-1544345429 /home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorApp.h
+1544353332 /home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorApp.h
 	<wx/app.h>
 
 1522244266 /usr/include/wx-3.0/wx/app.h
@@ -580,7 +580,7 @@
 
 1522244266 /usr/include/wx-3.0/wx/gtk/app.h
 
-1544348029 /home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorMain.h
+1544353341 /home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorMain.h
 	<wx/progdlg.h>
 	<wx/button.h>
 	<wx/menu.h>
@@ -1048,7 +1048,7 @@
 	"wx/gdicmn.h"
 	"wx/stream.h"
 
-1544349844 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/tinyexpr.c
+1544354994 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/tinyexpr.c
 	"tinyexpr.h"
 	<stdlib.h>
 	<math.h>
@@ -1058,7 +1058,7 @@
 
 1526006453 /home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/tinyexpr.h
 
-1544350228 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorMain.cpp
+1544353294 source:/home/codebits/Desktop/ExpandedCalculator/ExpandedCalculator/ExpandedCalculatorMain.cpp
 	"ExpandedCalculatorMain.h"
 	<wx/msgdlg.h>
 	"tinyexpr.h"

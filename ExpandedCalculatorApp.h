@@ -1,9 +1,9 @@
 /***************************************************************
  * Name:      ExpandedCalculatorApp.h
  * Purpose:   Defines Application Class
- * Author:    Phillip Duncan ()
+ * Author:    CoopProjects
  * Created:   2018-12-09
- * Copyright: Phillip Duncan ()
+ * Copyright: CoopProjects
  * License:
  **************************************************************/
 
